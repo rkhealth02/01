@@ -1,0 +1,3 @@
+".\Objects\Q7 send data serially to p0 read p1 and give copy to p2 generate sqare wave timer 0.obj" 
+TO ".\Objects\check lab 4" 
+PRINT(".\Listings\check lab 4.m51")

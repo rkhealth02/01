@@ -1,0 +1,41 @@
+C51 COMPILER V9.60.0.0   Q6_DATA_FROM_P1__TO_P1_0_CREAT_SQUARE_WAV                         03/03/2022 22:56:43 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE Q6_DATA_FROM_P1__TO_P1_0_CREAT_SQUARE_WAV
+OBJECT MODULE PLACED IN .\Objects\Q6 data from p1. to p1.0 creat square wave.obj
+COMPILER INVOKED BY: C:\keil 8051\C51\BIN\C51.EXE ..\..\lab 4\Q6 data from p1. to p1.0 creat square wave.c OPTIMIZE(8,SP
+                    -EED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\Q6 data from p1. to p1.0 creat square wave.lst) TABS(2) OBJECT(.\Objects
+                    -\Q6 data from p1. to p1.0 creat square wave.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          sbit SW =P1^7;
+   3          sbit IND =P1^0;
+   4          sbit WAVE =P2^5;
+   5          void timer0(void) interrupt 1 {
+   6   1        WAVE=~WAVE; //toggle pin
+   7   1        }
+   8          void main() {
+   9   1        SW=1; //make switch input
+  10   1        TMOD=0x02;
+  11   1        TH0=0xA4; //TH0=-92
+  12   1        IE=0x82; //enable interrupt for timer 0
+  13   1        while (1) {
+  14   2          IND=SW; //send switch to LED
+  15   2          }
+  16   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     20    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

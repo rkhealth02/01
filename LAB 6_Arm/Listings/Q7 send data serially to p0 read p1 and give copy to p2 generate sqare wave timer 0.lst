@@ -1,0 +1,56 @@
+C51 COMPILER V9.60.0.0   Q7_SEND_DATA_SERIALLY_TO_P0_READ_P1_AND_G                         03/03/2022 23:00:34 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE Q7_SEND_DATA_SERIALLY_TO_P0_READ_P1_AND_G
+OBJECT MODULE PLACED IN .\Objects\Q7 send data serially to p0 read p1 and give copy to p2 generate sqare wave timer 0.obj
+COMPILER INVOKED BY: C:\keil 8051\C51\BIN\C51.EXE ..\..\lab 4\Q7 send data serially to p0 read p1 and give copy to p2 ge
+                    -nerate sqare wave timer 0.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\Q7 send data serially to p0 rea
+                    -d p1 and give copy to p2 generate sqare wave timer 0.lst) TABS(2) OBJECT(.\Objects\Q7 send data serially to p0 read p1 a
+                    -nd give copy to p2 generate sqare wave timer 0.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          sbit WAVE =P0^1;
+   3          void timer0() interrupt 1 {
+   4   1        WAVE=~WAVE; //toggle pin
+   5   1      }
+   6          void serial0() interrupt 4 {
+   7   1        if (TI==1) {
+   8   2          TI=0; //clear interrupt
+   9   2        } 
+  10   1        else {
+  11   2          P0=SBUF; //put value on pins
+  12   2          RI=0; //clear interrupt
+  13   2        }
+  14   1      }
+  15          void main() {
+  16   1        unsigned char x;
+  17   1        P1=0xFF; //make P1 an input
+  18   1        TMOD=0x22;
+  19   1        TH1=0xF6; //4800 baud rate
+  20   1        SCON=0x50;
+  21   1        TH0=0xA4; //5 kHz has T=200us
+  22   1        IE=0x92; //enable interrupts
+  23   1        TR1=1; //start timer 1
+  24   1        TR0=1; //start timer 0
+  25   1        while (1) {
+  26   2          x=P1; //read value from pins
+  27   2          SBUF=x; //put value in buffer
+  28   2          P2=x; //write value to pins
+  29   2        }
+  30   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     45    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

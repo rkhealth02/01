@@ -1,0 +1,37 @@
+C51 COMPILER V9.60.0.0   Q5                                                                03/03/2022 22:54:13 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE Q5
+OBJECT MODULE PLACED IN .\Objects\Q5.obj
+COMPILER INVOKED BY: C:\keil 8051\C51\BIN\C51.EXE ..\..\lab 4\Q5.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\L
+                    -istings\Q5.lst) TABS(2) OBJECT(.\Objects\Q5.obj)
+
+line level    source
+
+   1          //ROHIT KUMBHAR [RA1911043010041]
+   2          #include <reg51.h>
+   3          void main(void){
+   4   1        TMOD=0x20;
+   5   1        TH1=0xFA;
+   6   1        SCON=0x50;
+   7   1        TR1=1;
+   8   1        while(1){
+   9   2          SBUF='C';
+  10   2          while(TI==0);
+  11   2          TI=0;
+  12   2        }
+  13   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     21    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
