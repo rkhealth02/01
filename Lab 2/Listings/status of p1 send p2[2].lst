@@ -1,0 +1,37 @@
+C51 COMPILER V9.60.0.0   STATUS_OF_P1_SEND_P2_2_                                           02/08/2022 22:39:50 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE STATUS_OF_P1_SEND_P2_2_
+OBJECT MODULE PLACED IN .\Objects\status of p1 send p2[2].obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE ..\Lab 3\status of p1 send p2[2].c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECT
+                    -EXTEND PRINT(.\Listings\status of p1 send p2[2].lst) TABS(2) OBJECT(.\Objects\status of p1 send p2[2].obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          sbit inbit=P1^0;
+   3          sbit outbit=P2^7;
+   4          bit membit; //use bit to declare
+   5          //bit- addressable memory
+   6          void main(void)
+   7            {
+   8   1          while (1)
+   9   1          {
+  10   2            membit=inbit; //get a bit from P1.0
+  11   2            outbit=membit; //send it to P2.7
+  12   2          }
+  13   1        }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     10    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      1    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

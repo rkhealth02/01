@@ -1,0 +1,66 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.36.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Rohit Kumbhar, HP Inc., LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.36.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.36.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      UL2CM3.DLL V1.164.0.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+C:\Keil_v5\C51\Examples\HELLO\lab 5\arm_try1.uvprojx
+Project File Date:  02/22/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+ArmClang: warning: argument unused during compilation: '-D __UVISION_VERSION=536' [-Wunused-command-line-argument]
+"../arm1/5_1.asm", line 3 (column 5): Error: A1163E: Unknown opcode R1, , expecting opcode or Macro
+    3 00000000 MOV R1, #0x03
+                   ^
+"../arm1/5_1.asm", line 4 (column 5): Error: A1163E: Unknown opcode R2, , expecting opcode or Macro
+    4 00000000 MOV R2, #0x02
+                   ^
+"../arm1/5_1.asm", line 5 (column 5): Error: A1163E: Unknown opcode R0, , expecting opcode or Macro
+    5 00000000 ADD R0, R1, R2
+                   ^
+"../arm1/5_1.asm", line 7: Warning: A1447W: Missing END directive at end of file, but found a label named END
+    7 00000000 
+3 Errors, 1 Warning
+assembling 5_1.asm...
+linking...
+.\Objects\arm_try1.axf: error: L6002U: Could not open file .\objects\5_1.o: No such file or directory
+Not enough information to list image symbols.
+Not enough information to list load addresses in the image map.
+Finished: 2 information, 0 warning, 0 error and 1 fatal error messages.
+".\Objects\arm_try1.axf" - 1 Error(s), 1 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+
+<h2>Collection of Component include folders:</h2>
+  C:\Users\rohit\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM7\Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>

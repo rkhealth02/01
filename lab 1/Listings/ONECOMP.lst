@@ -1,0 +1,29 @@
+A51 MACRO ASSEMBLER  ONECOMP                                                              01/24/2022 10:06:31 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\ONECOMP.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE ONECOMP.asm SET(SMALL) DEBUG PRINT(.\Listings\ONECOMP.lst) OBJECT(.\Obj
+                      ects\ONECOMP.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 7403              2     MOV A, #03
+0002 F4                3     CPL A
+0003 F8                4     MOV R0, A
+                       5     END
+A51 MACRO ASSEMBLER  ONECOMP                                                              01/24/2022 10:06:31 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

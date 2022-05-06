@@ -1,0 +1,37 @@
+C51 COMPILER V9.60.0.0   MONITOR_BIT_7_                                                    02/08/2022 22:49:42 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE MONITOR_BIT_7_
+OBJECT MODULE PLACED IN .\Objects\monitor bit[7].obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE ..\Lab 3\monitor bit[7].c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PR
+                    -INT(.\Listings\monitor bit[7].lst) TABS(2) OBJECT(.\Objects\monitor bit[7].obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          sbit mybit=P1^5;
+   3          void main(void)
+   4          {
+   5   1      mybit=1; //make mybit an input
+   6   1      while (1)
+   7   1      {
+   8   2      if (mybit==1)
+   9   2      P0=0x55;
+  10   2      else
+  11   2      P2=0xAA;
+  12   2      }
+  13   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     15    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

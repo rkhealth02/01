@@ -1,0 +1,44 @@
+C51 COMPILER V9.60.0.0   Q3_CREAT_FREQ_OF_2500HZ_P2_7                                      02/15/2022 10:03:21 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE Q3_CREAT_FREQ_OF_2500HZ_P2_7
+OBJECT MODULE PLACED IN .\Objects\Q3 creat freq of 2500Hz p2.7.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE ..\lab 4\Q3 creat freq of 2500Hz p2.7.c OPTIMIZE(8,SPEED) BROWSE DEBUG O
+                    -BJECTEXTEND PRINT(.\Listings\Q3 creat freq of 2500Hz p2.7.lst) TABS(2) OBJECT(.\Objects\Q3 creat freq of 2500Hz p2.7.obj
+                    -)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          void T1M2Delay(void);
+   3          sbit mybit=P2^7;
+   4          void main(void){
+   5   1        unsigned char x;
+   6   1        while (1) {
+   7   2          mybit=~mybit;
+   8   2          T1M2Delay();
+   9   2        }
+  10   1      }
+*** WARNING C280 IN LINE 5 OF ..\lab 4\Q3 creat freq of 2500Hz p2.7.c: 'x': unreferenced local variable
+  11          void T1M2Delay(void){
+  12   1        TMOD=0x20;
+  13   1        TH1=-184;
+  14   1        TR1=1;
+  15   1        while (TF1==0);
+  16   1          TR1=0;
+  17   1          TF1=0;
+  18   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     23    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

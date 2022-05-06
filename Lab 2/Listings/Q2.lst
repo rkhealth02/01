@@ -1,0 +1,33 @@
+A51 MACRO ASSEMBLER  Q2                                                                   02/08/2022 20:38:45 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\Q2.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE Q2.asm SET(SMALL) DEBUG PRINT(.\Listings\Q2.lst) OBJECT(.\Objects\Q2.ob
+                      j) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ;rohit kumbhar
+0000 D297              2                     SETB P1.7                       
+0002 A290              3     AGAIN:  MOV C, P1.0             
+0004 92A7              4                     MOV P2.7, C             
+0006 80FA              5                     SJMP AGAIN
+                       6                     END
+A51 MACRO ASSEMBLER  Q2                                                                   02/08/2022 20:38:45 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+AGAIN. . . . . . .  C ADDR   0002H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

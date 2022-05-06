@@ -1,0 +1,46 @@
+A51 MACRO ASSEMBLER  5_1                                                                  02/22/2022 07:17:48 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+NO OBJECT MODULE REQUESTED
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE ..\lab 5\5.1.asm SET(SMALL) DEBUG PRINT(.\Listings\5.1.lst) OBJECT(.\Ob
+                      jects\5.1.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     AREA P1, CODE, READONLY
+*** _________________________^
+*** ERROR #A9 IN 1 (..\lab 5\5.1.asm, LINE -3): SYNTAX ERROR
+                       2     ENTRY
+*** _________________________^
+*** ERROR #A9 IN 2 (..\lab 5\5.1.asm, LINE 2): SYNTAX ERROR
+0000 7903              3     MOV R1, #0x03
+0002 7A02              4     MOV R2, #0x02
+0004                   5     ADD R0, R1, R2
+*** _________________________^
+*** ERROR #A38 IN 5 (..\lab 5\5.1.asm, LINE 5): NUMBER OF OPERANDS DOES NOT MATCH INSTRUCTION
+                       6     B   L
+*** _________________________^
+*** ERROR #A9 IN 6 (..\lab 5\5.1.asm, LINE 6): SYNTAX ERROR
+                       7     END
+                             
+A51 MACRO ASSEMBLER  5_1                                                                  02/22/2022 07:17:48 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+AREA . . . . . . .    ----   -----       
+B. . . . . . . . .  D ADDR   00F0H   A   
+ENTRY. . . . . . .    ----   -----       
+L. . . . . . . . .    ----   -----       
+P1 . . . . . . . .  D ADDR   0090H   A   
+READONLY . . . . .    ----   -----       
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 4 ERROR(S)

@@ -1,0 +1,57 @@
+A51 MACRO ASSEMBLER  Q5_DATA_TRANSFER                                                     02/08/2022 22:02:05 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\Q5_data transfer.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE Q5_data transfer.asm SET(SMALL) DEBUG PRINT(.\Listings\Q5_data transfer
+                      .lst) OBJECT(.\Objects\Q5_data transfer.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 C29F              1                     CLR SM0 
+0002 D29E              2                     SETB SM1
+0004 E587              3                     MOV A, PCON
+0006 D2E7              4                     SETB ACC.7
+0008 F587              5                     MOV PCON, A     
+000A 758920            6                     MOV TMOD, #20H
+000D 758DF3            7                     MOV TH1, #243   
+0010 758BF3            8                     MOV TL1, #243   
+0013 D28E              9                     SETB TR1
+0015 753061           10                     MOV 30H, #'a'   
+0018 753162           11                     MOV 31H, #'b'
+001B 7830             12                     MOV R0, #30H
+001D E6               13     Again:  MOV A, @R0
+001E 600A             14                     JZ finish
+0020 F599             15                     MOV SBUF, A     
+0022 08               16                     INC R0  
+0023 3099FD           17                     JNB TI, $
+0026 C299             18                     CLR TI
+0028 80F3             19                     JMP again
+002A 80FE             20     Finish: JMP $
+                      21             END
+A51 MACRO ASSEMBLER  Q5_DATA_TRANSFER                                                     02/08/2022 22:02:05 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ACC. . . . . . . .  D ADDR   00E0H   A   
+AGAIN. . . . . . .  C ADDR   001DH   A   
+FINISH . . . . . .  C ADDR   002AH   A   
+PCON . . . . . . .  D ADDR   0087H   A   
+SBUF . . . . . . .  D ADDR   0099H   A   
+SM0. . . . . . . .  B ADDR   0098H.7 A   
+SM1. . . . . . . .  B ADDR   0098H.6 A   
+TH1. . . . . . . .  D ADDR   008DH   A   
+TI . . . . . . . .  B ADDR   0098H.1 A   
+TL1. . . . . . . .  D ADDR   008BH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR1. . . . . . . .  B ADDR   0088H.6 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

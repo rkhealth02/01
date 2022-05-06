@@ -1,0 +1,30 @@
+A51 MACRO ASSEMBLER  ADD                                                                  01/24/2022 10:01:31 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\add.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE add.asm SET(SMALL) DEBUG PRINT(.\Listings\add.lst) OBJECT(.\Objects\add
+                      .obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 7805              2     MOV R0,#05H;
+0002 7406              3     MOV A,#06H;
+0004 28                4     ADD A,R0;
+0005 F9                5     MOV R1,A;
+                       6     END
+A51 MACRO ASSEMBLER  ADD                                                                  01/24/2022 10:01:31 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

@@ -1,0 +1,33 @@
+A51 MACRO ASSEMBLER  DIV                                                                  02/03/2022 22:12:21 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\DIV.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE ..\lab 1\DIV.asm SET(SMALL) DEBUG PRINT(.\Listings\DIV.lst) OBJECT(.\Ob
+                      jects\DIV.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ;ROHIT KUMBHAR
+0000                   2     ORG 0000H
+0000 7406              3     MOV A, #06
+0002 75F002            4     MOV B, #02
+0005 84                5     DIV AB
+0006 F8                6     MOV R0, A
+0007 A9F0              7     MOV R1, B
+                       8     END
+A51 MACRO ASSEMBLER  DIV                                                                  02/03/2022 22:12:21 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
